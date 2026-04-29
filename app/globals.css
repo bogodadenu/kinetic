@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-color: #0A0A0B;
+    --card-bg: #111113;
+    --text-primary: #f3f4f6; /* gray-100 */
+    --text-secondary: #6b7280; /* gray-500 */
+    --accent: #dc2626; /* red-600 */
+    --accent-hover: #b91c1c;
+    --accent-cyan: #3b82f6; /* blue-500 */
+    --accent-green: #22c55e;
+    --accent-yellow: #eab308;
+    --accent-purple: #c084fc;
+    --mono-font: 'JetBrains Mono', 'Roboto Mono', monospace;
+    --sans-font: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--sans-font);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 1px solid #1f2937; /* border-gray-800 */
+  }
+  
+  .tech-border {
+    border: 1px solid #1f2937;
+  }
+  
+  .data-value {
+    font-family: var(--mono-font);
+  }
+  
+  .text-neon-red {
+    color: var(--text-primary);
+  }
+}
+
+/* react-grid-layout overrides */
+.react-grid-item.react-grid-placeholder {
+  background: var(--accent) !important;
+  opacity: 0.2;
+  border-radius: 0.5rem;
+}
